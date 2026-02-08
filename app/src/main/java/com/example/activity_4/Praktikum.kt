@@ -44,6 +44,7 @@ fun Praktikum(modifier: Modifier = Modifier) {
             .background(colorResource(id = R.color.biru_muda))
             .navigationBarsPadding()
             .verticalScroll(rememberScrollState())
+
     ) {
 
         Box(
@@ -179,7 +180,6 @@ fun Praktikum(modifier: Modifier = Modifier) {
                         Text("Alamat : $alamat")
                     }
                 }
-
 
 
 
