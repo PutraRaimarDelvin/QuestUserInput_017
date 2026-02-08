@@ -31,7 +31,7 @@ fun Praktikum(modifier: Modifier = Modifier) {
 
     var nama by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
-    
+
     var jenis by remember { mutableStateOf("") }
     var status by remember { mutableStateOf("") }
 
@@ -168,6 +168,12 @@ fun Praktikum(modifier: Modifier = Modifier) {
                 ) {
                     Text("Submit")
                 }
+
+                onClick = {
+                    nama = textNama
+                    alamat = textAlamat
+                }
+
 
             }
         }
