@@ -15,7 +15,10 @@ import java.lang.reflect.Modifier
 @Composable
 fun Praktikum() {
     var textJK by remember { mutableStateOf("") }
-    val gender = listOf("Laki-laki", "Perempuan")
+    var textStatus by remember { mutableStateOf("") }
+
+    val gender = listOf("Laki-laki", "Perempuan"
+    val statusOption = listOf("Menikah", "Belum Menikah", "Jomblo"))
 
     Column {
         Text("Jenis Kelamin")
