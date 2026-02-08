@@ -161,7 +161,10 @@ fun Praktikum(modifier: Modifier = Modifier) {
                     alamat = textAlamat
                 }
             ) {
-                Button(onClick = {}) {
+                Button(
+                    enabled = textAlamat.isNotEmpty(),
+                    onClick = {}
+                ) {
                     Text("Submit")
                 }
 
