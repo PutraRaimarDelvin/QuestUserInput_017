@@ -173,8 +173,13 @@ fun Praktikum(modifier: Modifier = Modifier) {
                     nama = textNama
                     alamat = textAlamat
                 }
-                Text("Nama : $nama")
-                Text("Alamat : $alamat")
+                ElevatedCard {
+                    Column {
+                        Text("Nama : $nama")
+                        Text("Alamat : $alamat")
+                    }
+                }
+
 
 
 
