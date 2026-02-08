@@ -71,11 +71,10 @@ fun Praktikum(modifier: Modifier = Modifier) {
                     .size(42.dp)
                     .background(Color.White, CircleShape)
             ) {
-                Icon(
-                    imageVector = Icons.Default.Menu,
-                    contentDescription = "Menu",
-                    tint = colorResource(id = R.color.biru)
-                )
+                IconButton(onClick = {}) {
+                    Icon(Icons.Default.Menu, contentDescription = "Menu")
+                }
+
             }
         }
 
