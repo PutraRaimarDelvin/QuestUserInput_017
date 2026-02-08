@@ -31,7 +31,6 @@ fun Praktikum(modifier: Modifier = Modifier) {
 
     var nama by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
-
     var jenis by remember { mutableStateOf("") }
     var status by remember { mutableStateOf("") }
 
@@ -44,7 +43,6 @@ fun Praktikum(modifier: Modifier = Modifier) {
             .background(colorResource(id = R.color.biru_muda))
             .navigationBarsPadding()
             .verticalScroll(rememberScrollState())
-
     ) {
 
         Box(
@@ -71,10 +69,11 @@ fun Praktikum(modifier: Modifier = Modifier) {
                     .size(42.dp)
                     .background(Color.White, CircleShape)
             ) {
-                IconButton(onClick = {}) {
-                    Icon(Icons.Default.Menu, contentDescription = "Menu")
-                }
-
+                Icon(
+                    imageVector = Icons.Default.Menu,
+                    contentDescription = "Menu",
+                    tint = colorResource(id = R.color.biru)
+                )
             }
         }
 
@@ -152,8 +151,8 @@ fun Praktikum(modifier: Modifier = Modifier) {
                     .height(48.dp),
                 enabled = textAlamat.isNotEmpty(),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(id = R.color.abu_tua), 
-                        disabledContainerColor = Color.LightGray
+                    containerColor = colorResource(id = R.color.abu_tua),
+                    disabledContainerColor = Color.LightGray
                 ),
                 onClick = {
                     nama = textNama
@@ -162,27 +161,50 @@ fun Praktikum(modifier: Modifier = Modifier) {
                     alamat = textAlamat
                 }
             ) {
-                Button(
-                    enabled = textAlamat.isNotEmpty(),
-                    onClick = {}
-                ) {
-                    Text("Submit")
+                Text(
+                    text = "Submit",
+                    color = Color.White,
+                    fontWeight = FontWeight.SemiBold
+                )
+            }
+        }
+
+        ElevatedCard(
+            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White)
+        ) {
+            Column(
+                modifier = Modifier.padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+
+                Text(
+                    text = "HASIL PENDAFTARAN",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+
+                Divider()
+
+                Row {
+                    Text("Nama : ", fontWeight = FontWeight.SemiBold)
+                    Text(nama)
                 }
-
-                onClick = {
-                    nama = textNama
-                    alamat = textAlamat
+                Row {
+                    Text("Jenis Kelamin : ", fontWeight = FontWeight.SemiBold)
+                    Text(jenis)
                 }
-                ElevatedCard {
-                    Column {
-                        Text("Nama : $nama")
-                        Text("Alamat : $alamat")
-                    }
+                Row {
+                    Text("Status Perkawinan : ", fontWeight = FontWeight.SemiBold)
+                    Text(status)
                 }
-
-
-
-
+                Row {
+                    Text("Alamat : ", fontWeight = FontWeight.SemiBold)
+                    Text(alamat)
+                }
             }
         }
     }
