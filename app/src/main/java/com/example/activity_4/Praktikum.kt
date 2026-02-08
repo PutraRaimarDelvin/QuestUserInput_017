@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Praktikum(modifier: Modifier = Modifier) {
+fun FormPendaftaran(modifier: Modifier = Modifier) {
 
     var textNama by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }

@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Activity_4Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Praktikum(
+                    FormPendaftaran(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
