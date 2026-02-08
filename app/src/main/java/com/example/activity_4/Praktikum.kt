@@ -152,8 +152,8 @@ fun Praktikum(modifier: Modifier = Modifier) {
                     .height(48.dp),
                 enabled = textAlamat.isNotEmpty(),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(id = R.color.abu_tua),
-                    disabledContainerColor = Color.LightGray
+                    containerColor = colorResource(id = R.color.abu_tua), 
+                        disabledContainerColor = Color.LightGray
                 ),
                 onClick = {
                     nama = textNama
